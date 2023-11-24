@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; /* Align to the top of the web page */
+      height: 100vh;
+      margin: 0;
+      font-size: 12px; /* Set font size to 12px */
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+      width: 90px; /* Set column width to auto */
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    /* Set height for cells in the "Name & Designation" column */
+    td:nth-child(1) {
+      height: 10px;
+      
+    }
+    button{
+        width: 90px;
+        text-align: left;
+        font-size: 10px;
+        height: 20px;
+        margin: 1px;
+        border-radius: 25px;
+        border: none;
+        background-color: blueviolet;
+        color: white;
+    }
+  </style>
+</head>
+<body>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name & Designation</th>
+      <th style="text-align: center;">In Com</th>
+      <th style="text-align: center;">Mobile Line<br> Land Line</th>
+      <th colspan="2">Call Now</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Name & Designation">A K M N K WIKRAMANAYAKE    <br> ( land officer)    </td>
+      <td style="text-align: center;">300</td>
+      <td data-label="Mobile Line" style="width: 150px; text-align: center;">123-456-7890 <br>987-654-3210</td>
+      <td data-label="Call Now"><button onclick="callNumber('1234567890')">Call LandLine</button><br>
+      <button onclick="callNumber('9876543210')">Call MobileLine</button>
+      </td>
+    
+    </tr>
+  
+    <!-- Add more rows as needed -->
+  </tbody>
+</table>
+
+<script>
+  function callNumber(phoneNumber) {
+    // You can add your logic here to handle the "Call Now" functionality
+    alert("Calling " + phoneNumber);
+    // Example: You might want to use a library like Twilio to initiate a phone call
+  }
+</script>
+
+</body>
+</html>
